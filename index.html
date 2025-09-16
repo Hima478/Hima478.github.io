@@ -17,11 +17,15 @@
     rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
+  <!-- Use CDN for faster vendor CSS delivery (optional, see comment below) -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <!-- Preload fonts for faster rendering -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet" />
@@ -62,13 +66,13 @@
   <main class="main">
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
-      <img src="assets/img/rahul-mishra-7vNPUkY3gg4-unsplash.jpg" alt="" data-aos="fade-in" />
+      <img src="assets/img/rahul-mishra-7vNPUkY3gg4-unsplash.jpg" alt="" data-aos="fade-in" loading="lazy" />
 
       <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up"
         data-aos-delay="100">
-        <h2>I am Ibrahim Reda Mohamed</h2>
+        <h2>I am Ibrahim Reda</h2>
         <p>
-          <span class="typed" data-typed-items="Developer, Freelancer"></span>
+          <span class="typed" data-typed-items="Developer, Data Scientist, Freelancer"></span>
         </p>
       </div>
     </section>
@@ -157,21 +161,30 @@
           <div class="col-md-6">
             <div class="about-me">
               <h4>About me</h4>
-              <p></p>
+              <div style="display: flex; justify-content: center; margin: 16px 0;">
+                <img src="assets/img/pp.jpg" alt="Profile Picture"
+                  style="width: 360px; height: 360px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 3px solid #eee;"
+                  loading="lazy" />
+              </div>
               <p>
-                I’m a Computer Science student at Cairo University, specializing in Artificial Intelligence and
-                consistently ranked among the top of my year. With strong experience in Python and C++, I focus on
-                building data-driven solutions and machine learning models that address real-world challenges. My
-                portfolio includes projects in data analysis, predictive modeling, and AI applications — all developed
-                with clean, modular, and scalable code.
+                I’m Ibrahim, a Computer Science student at Cairo University, specializing in Artificial Intelligence and
+                ranked among the top of my class. With strong experience in Python and C++, I build data-driven
+                solutions and machine learning models that tackle real-world challenges.
               </p>
 
               <p>
-                Currently, I'm polishing my portfolio and CV to attract
-                freelance and agency opportunities. My long-term goal is to
-                build a global freelance brand that blends technical
-                excellence with strategic communication. Let's build something
-                exceptional together.
+                Beyond academics, I’ve worked on projects in data analysis, predictive modeling, and AI
+                applications—always with a focus on clean, modular, and scalable code. My goal is simple: to transform
+                raw data into clear, actionable insights that drive smarter decisions and measurable results.
+              </p>
+
+              <p>
+                I value reliable communication, on-time delivery, and solutions tailored to the unique needs of each
+                project. Whether it’s research, freelancing, or collaboration, I bring both technical expertise and a
+                problem-solving mindset to the table.
+              </p>
+              <p>
+                Let’s turn data into decisions—and ideas into impact.
               </p>
             </div>
           </div>
@@ -201,11 +214,10 @@
             <div class="resume-item pb-0">
               <h4>Ibrahim Reda Mohamed</h4>
               <p>
-                <em>Motivated and analytical Computer Science student at the University of Cairo with a strong academic
-                  background (GPA: 3.62) and a passion for data science, machine learning, and AI. Skilled in Python,
-                  C++, and SQL with hands-on knowledge in web development fundamentals (HTML, CSS and JavaScript). Quick
-                  learner with a solid foundation in data structures, algorithms, and problem-solving. Eager to
-                  contribute to innovative projects, build real-world experience, and grow in the tech field.</em>
+                <em>Computer Science student (GPA 3.62) with strong skills in algorithms, statistics, Python, SQL, and
+                  data science libraries (NumPy, Pandas, scikit-learn). Experienced in building data-driven applications
+                  and familiar with TensorFlow and model evaluation techniques. Seeking internships or entry-level roles
+                  in Machine Learning or Data Science to apply predictive modeling and software engineering skills.</em>
               </p>
               <ul>
                 <li>Giza, Egypt</li>
@@ -233,18 +245,24 @@
 
             <h3 class="resume-title">Courses & Certifications</h3>
             <div class="resume-item">
-              <h4>• FinYology Competition for Participation in FinTech (CBE)</h4>
-              <h5>Apr 2025 – Jun 2025</h5>
-              <p><em>Powered by Central Bank of Egypt (CBE)</em></p>
-
-            </div>
-            <div class="resume-item">
               <h4>Digital Egypt Pioneers Initiative (DEPI)</h4>
               <h5>June 2025 – Present</h5>
               <p><em>Data Science by IBM, Ministry of Communications</em></p>
               <ul>
                 <li>Python, SQL, ML, MLOps, Hugging Face, MLflow</li>
                 <li>Capstone project in progress</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>• Supervised Machine Learning: Regression & Classification</h4>
+              <h5>Aug 2025 – Sep 2025</h5>
+              <p><em>Coursera by Andrew Ng</em></p>
+              <ul>
+                <li>Built and trained supervised models in Python (using NumPy & scikit-learn) for both prediction and
+                  binary classification, including linear & logistic regression.</li>
+                <li>Applied techniques to improve model performance: feature engineering, regularization (to avoid
+                  overfitting), and error‐metric selection.</li>
               </ul>
             </div>
             <div class="resume-item">
@@ -378,6 +396,7 @@
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-fullstack">Full-stack</li>
             <li data-filter=".filter-console">Console</li>
+            <li data-filter=".filter-data">Data Science</li>
           </ul>
           <!-- End Portfolio Filters -->
 
@@ -386,7 +405,7 @@
 
             <!-- Online Library -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-fullstack">
-              <img src="assets/img/portfolio/library.jpg" class="img-fluid" alt="Online Library" />
+              <img src="assets/img/portfolio/library.jpg" class="img-fluid" alt="Online Library" loading="lazy" />
               <div class="portfolio-info">
                 <h4>Online Library</h4>
                 <p>Django | Book browsing, database integration</p>
@@ -401,7 +420,7 @@
             <!-- Image Filters -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-console">
               <img src="assets/img/portfolio/rami-al-zayat-w33-zg-dNL4-unsplash.jpg" class="img-fluid"
-                alt="Image Filters" />
+                alt="Image Filters" loading="lazy" />
               <div class="portfolio-info">
                 <h4>Image Filters</h4>
                 <p>C++ | Grayscale, blur, and other filters</p>
@@ -416,7 +435,7 @@
             <!-- Conference Management System Implementation -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-console">
               <img src="assets/img/portfolio/database.avif" class="img-fluid"
-                alt="Conference Management System Implementation" />
+                alt="Conference Management System Implementation" loading="lazy" />
               <div class="portfolio-info">
                 <h4>Conference Management System Implementation</h4>
                 <p>C | Custom conference management system with user roles using database and SQL Server</p>
@@ -430,7 +449,7 @@
 
             <!-- Board Games -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-console">
-              <img src="assets/img/portfolio/tic tac toe.jpg" class="img-fluid" alt="Board Games" />
+              <img src="assets/img/portfolio/tic tac toe.jpg" class="img-fluid" alt="Board Games" loading="lazy" />
               <div class="portfolio-info">
                 <h4>Board Games</h4>
                 <p>
@@ -534,19 +553,27 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/php-email-form/validate.js" defer></script>
+  <script src="assets/vendor/aos/aos.js" defer></script>
+  <script src="assets/vendor/typed.js/typed.umd.js" defer></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
+  <!--
+    Additional recommendations:
+    - Compress images in assets/img and assets/img/portfolio (use TinyPNG, Squoosh, or similar).
+    - Consider serving images in WebP format for browsers that support it.
+    - Use a CDN for vendor libraries for even faster delivery.
+    - Minify your main.css if not already minified.
+    - Set cache headers for static assets via your web server.
+  -->
 </body>
 
 </html>
